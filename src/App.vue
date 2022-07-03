@@ -5,7 +5,7 @@
 </template>
 <script>
 import { defineComponent } from "vue";
-import Demo from "./05v-for使用/v-for基本使用.vue";
+import Demo from "./vue2-options-Api/07watch侦听器/侦听器使用的其他方式.vue";
 export default defineComponent({
   components: {
     Demo,
