@@ -5,7 +5,7 @@
 </template>
 <script>
 import { defineComponent } from "vue";
-import Demo from "./Provide和Inject/Root.vue";
+import Demo from "./事件总线/father.vue";
 export default defineComponent({
   components: {
     Demo,
