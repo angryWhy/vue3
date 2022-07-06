@@ -1,17 +1,22 @@
 <template>
   <div>
-    <Demo />
+    我是父组件
+    <son-cpn />
   </div>
 </template>
+
 <script>
 import { defineComponent } from "vue";
-import Demo from "./Provide和Inject/Root.vue";
+import SonCpn from "./son.vue";
 export default defineComponent({
+  name: "FatherCpn",
   components: {
-    Demo,
+    SonCpn,
   },
-  setup() {},
+  setup() {
+    return {};
+  },
 });
 </script>
 
-<style></style>
+<style scoped></style>
