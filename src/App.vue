@@ -5,7 +5,7 @@
 </template>
 <script>
 import { defineComponent } from "vue";
-import Demo from "../动态组件/father.vue";
+import Demo from "../v-model高阶/Home.vue";
 export default defineComponent({
   components: {
     Demo,
