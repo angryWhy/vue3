@@ -1,5 +1,5 @@
 <template>
-  <div>我是动态组件</div>
+  <div>动态组件---CHILD</div>
 </template>
 
 <script>

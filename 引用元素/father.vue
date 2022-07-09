@@ -17,9 +17,10 @@ export default defineComponent({
   methods: {
     btnClick() {
       //proxy对象
-      this.$$refs.title;
+      console.log(`-------`, this.$refs.title);
+
       //原生元素
-      this.$$refs.child;
+      console.log(`-------`, this.$refs.child);
     },
   },
   setup() {
