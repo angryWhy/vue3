@@ -5,7 +5,7 @@
 </template>
 <script>
 import { defineComponent } from "vue";
-import Demo from "../v-model高阶/Home.vue";
+import Demo from "../composition-Api-1/03-readonly/home.vue";
 export default defineComponent({
   components: {
     Demo,
