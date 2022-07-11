@@ -3,7 +3,14 @@
 </template>
 
 <script>
-import { defineComponent, isRef, ref, shallowRef, unref } from "vue";
+import {
+  defineComponent,
+  isRef,
+  ref,
+  shallowRef,
+  triggerRef,
+  unref,
+} from "vue";
 export default defineComponent({
   name: "ToRefs",
   setup() {
@@ -17,13 +24,21 @@ export default defineComponent({
     const flag = isRef(count);
 
     //shallowRef-----深层不为响应式，与shallowReactive一样
-    const shallowRefObj = shallowRef(obj);
+    const shallowRefObj = shallowRef({ name: "wzx" });
+
+    //triggerRef
+    const changeObj = () => {
+      shallowRefObj.value.name = "hahahaha";
+      //强制触发响应式，轻质更新
+      triggerRef(shallowRefObj);
+    };
 
     return {
       UnCount,
       flag,
       obj,
       shallowRefObj,
+      changeObj,
     };
   },
 });

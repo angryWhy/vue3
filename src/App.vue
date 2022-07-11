@@ -4,13 +4,18 @@
   </div>
 </template>
 <script>
-import { defineComponent } from "vue";
-import Demo from "../composition-Api-2/reactive-API.vue";
+import { defineComponent, watchEffect } from "vue";
+import Demo from "../composition-Api-2/watch和computed/watch和watchEffect.vue";
 export default defineComponent({
   components: {
     Demo,
   },
-  setup() {},
+  setup() {
+    //自动收集响应式的依赖
+    watchEffect(() => {
+      console.log("name:", name.value);
+    });
+  },
 });
 </script>
 
