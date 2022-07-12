@@ -1,16 +1,17 @@
 <template>
   <div>
-    <Demo />
+    <input />
   </div>
 </template>
+
 <script>
 import { defineComponent } from "vue";
-import Demo from "../composition-Api-2/watch和computed/watch.vue";
 export default defineComponent({
-  components: {
-    Demo,
+  name: "AbCDEEE",
+  setup() {
+    return {};
   },
 });
 </script>
 
-<style></style>
+<style scoped></style>

@@ -14,17 +14,32 @@ export default defineComponent({
   setup() {
     const name = ref("hello");
     const age = ref(18);
+    //watchEffect里接受第一个参数，执行副作用
+    const stop = watchEffect(
+      (onInvalidate) => {
+        onInvalidate(() => {
+          //副作用执行，清除额外的副作用
+          //cancel上次的网络请求
+          console.log(`onInvildate副作用执行`);
+        });
+        console.log("name:", name.value);
+        console.log("age:", age.value);
+      },
+      {
+        flush: "post",
+      }
+    );
     const changeName = () => {
       name.value = "world";
     };
     const changeAge = () => {
-      age.value = 20;
+      age.value += 1;
+      if (age.value > 25) {
+        stop();
+      }
     };
     //watchEffect,自动收集响应依赖，怎么都会执行一次，刚开始就执行一次
-    watchEffect(() => {
-      console.log("name:", name.value);
-      console.log("age:", age.value);
-    });
+
     return {
       name,
       age,

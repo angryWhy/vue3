@@ -1,5 +1,8 @@
 <template>
-  <div></div>
+  <div>
+    {{ shallowRefObj.name }}
+  </div>
+  <button @click="changeObj">改变shallowRef</button>
 </template>
 
 <script>
@@ -8,8 +11,8 @@ import {
   isRef,
   ref,
   shallowRef,
-  triggerRef,
   unref,
+  triggerRef,
 } from "vue";
 export default defineComponent({
   name: "ToRefs",

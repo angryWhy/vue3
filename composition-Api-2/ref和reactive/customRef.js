@@ -5,6 +5,7 @@ export default function (value) {
     let timer = null;
     return {
       get() {
+        //
         track();
         return value;
       },
