@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <input />
-  </div>
+  <div></div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
 export default defineComponent({
-  name: "AbCDEEE",
+  name: "ChildCpn",
   setup() {
     return {};
   },
