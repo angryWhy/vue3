@@ -5,7 +5,7 @@
 </template>
 <script>
 import { defineComponent } from "vue";
-import Demo from "../composition-Api-2/watch和computed/watch.vue";
+import Demo from "../nextTick/nextTick.vue";
 export default defineComponent({
   components: {
     Demo,
